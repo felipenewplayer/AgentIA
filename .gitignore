@@ -1,6 +1,16 @@
-venv
-db
-docs
-.vscode
-__pycache__
-tempCodeRunnerFile.py
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual env
+venv/
+.env/
+
+# Banco vetorial
+db/
+
+# OS
+.DS_Store
+Thumbs.db
