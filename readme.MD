@@ -21,25 +21,25 @@ O projeto segue uma arquitetura modular baseada em separação de responsabilida
 ##  Estrutura do Projeto
 
 ```
-app/
+backend/app/rag/
 │
-├── core/
-│   ├── llm.py            # LLM (cérebro)
-│   ├── memory.py         # memória (opcional)
+├── ingestion/
+│   ├── loaders.py
+│   ├── splitter.py
+│   ├── metadata.py
+│   └── pipeline.py
 │
-├── rag/
-│   ├── loader.py         # carregamento de documentos
-│   ├── splitter.py       # chunking de texto
-│   ├── embeddings.py     # geração de embeddings
-│   ├── vector_store.py   # banco vetorial (Chroma)
-│   ├── retriever.py      # busca semântica
+├── embeddings/
+│   └── embedding_provider.py
 │
-├── tools/                # definição de tools do agent
+├── vectorstore/
+│   └── chroma_store.py
 │
-├── agent/
-│   ├── agent.py          # lógica do agent
+├── retriever/
+│   └── retriever.py
 │
-├── main.py               # execução da aplicação
+└── service/
+    └── rag_service.py
 ```
 
 ---
