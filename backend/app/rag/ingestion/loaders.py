@@ -11,7 +11,8 @@ def load_and_split():
 
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=500,
-        chunk_overlap=50
+        chunk_overlap=150,
+        separators=["\n\n","\n", ".", " "]
     )
 
     return splitter.split_documents(docs)
